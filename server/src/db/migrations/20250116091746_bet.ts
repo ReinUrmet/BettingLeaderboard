@@ -1,6 +1,9 @@
 import type { Knex } from 'knex';
 
+//See programm on vajalik, et API endpoint saaks siit andmeid võtta ja neid andmeid kasutada asjade arvutamisel
+
 export async function up(knex: Knex): Promise<void> {
+    //Siin loob tabelikus on järgnevad veerud:
     await knex.schema.createTable('bet', (table) => {
         table.uuid('id')
             .primary()
